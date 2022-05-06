@@ -6,4 +6,4 @@ export const LOGIN = 'Login';
 export const REGISTER = 'Register';
 export const HOME_NAVIGATOR = 'Home';
 
-//Hier kan je de naam veranderen zodat het niet overal appart hoef
+//Hier kan je de naam veranderen zodat het niet overal appart hoef te doen

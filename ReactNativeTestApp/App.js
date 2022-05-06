@@ -24,7 +24,7 @@ import GlobalProvider from './src/context/reducers/Provider';
 const App = () => {
   return (
     <GlobalProvider>
-      <AppNavContainer></AppNavContainer>;
+      <AppNavContainer></AppNavContainer>
     </GlobalProvider>
     
     );
