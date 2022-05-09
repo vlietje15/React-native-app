@@ -5,15 +5,14 @@ import AuthNavigator from './AuthNavigator';
 import HomeNavigator from './HomeNavigator';
 import DrawerNavigator from './DrawerNavigator';
 import { GlobalContext } from '../context/reducers/Provider';
-//import DrawerNavigator from './DrawerNavigator';
 
 const AppNavContainer=()=>{
     const {authState: {isLoggedIn},} = useContext(GlobalContext);
 
     return (
         <NavigationContainer>
-            {isLoggedIn? <HomeNavigator /> : <AuthNavigator />}
-            {/* {isLogedIn? <DrawerNavigator/>:<AuthNavigator/>} */}
+            {/* {isLoggedIn? <HomeNavigator /> : <AuthNavigator />} */}
+            {isLoggedIn? <DrawerNavigator/>:<AuthNavigator/>}
         </NavigationContainer>
     );
 };

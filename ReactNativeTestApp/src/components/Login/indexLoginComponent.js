@@ -46,7 +46,7 @@ const LoginComponent = () => {
                 <View style={styles.createSection}>
                     <Text style={styles.infoText}>Need a new account?</Text>
                     <TouchableOpacity 
-                        onPRess={() => {
+                        onPress={() => {
                             navigate(REGISTER);
                         }}>
                         <Text style={styles.linkBtn}>Register</Text>
