@@ -8,6 +8,13 @@ import ChatScreen from '../screens/chat/chatScreen';
 import AccountScreen from '../screens/account/accountScreen';
 
 import { styles } from "./stylesTabs";
+import Vraag1 from '../screens/survey/vraag_1/indexVraag1';
+import Vraag2 from '../screens/survey/vraag_2/indexVraag2';
+import Vraag3 from '../screens/survey/vraag_3/indexVraag3';
+import Vraag4 from '../screens/survey/vraag_4/indexVraag4';
+import Vraag5 from '../screens/survey/vraag_5/indexVraag5';
+import Vraag6 from '../screens/survey/vraag_6/indexVraag6';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -43,7 +50,7 @@ const Tabs = () => {
             
             <Tab.Screen 
                 name="Artikel"
-                component={ArtikelScreen} 
+                component={Vraag1} 
                 options={{
                     tabBarIcon: () => (
                         <View>
@@ -60,7 +67,7 @@ const Tabs = () => {
             
             <Tab.Screen 
                 name="Chat"
-                component={ChatScreen} 
+                component={Vraag2} 
                 options={{
                     tabBarIcon: () => (
                         <View>
@@ -76,7 +83,7 @@ const Tabs = () => {
             
             <Tab.Screen 
                 name="Account"
-                component={AccountScreen}
+                component={Vraag3}
                 options={{
                     tabBarIcon: () => (
                         <View>

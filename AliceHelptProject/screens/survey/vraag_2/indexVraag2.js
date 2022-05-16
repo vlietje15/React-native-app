@@ -4,7 +4,7 @@ import { styles } from "../style/stylesSurveyVragen";
 import MultipleChoice from "react-native-multiple-choice-picker";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 
-const Vraag1 = ({}) => {
+const Vraag2 = ({}) => {
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../../../assets/image/bgSurveyKort.png')}> 
@@ -21,14 +21,13 @@ const Vraag1 = ({}) => {
                 <View style={styles.containerContentSurvey}>
 
                     <Text style={styles.titel}>
-                            Vraag 1
+                            Vraag 2
                         </Text>
 
                         <Text style={styles.vraag}>
-                            Ik voel me veilig in mijn klas
+                            Ik voel me veilig op school
                         </Text>
 
-                        {/* https://github.com/nguythaitinh/react-native-multiple-choice-picker */}
                         <MultipleChoice
                             direction={'column'}
                             chosenColor={'#3975BB'}
@@ -45,8 +44,8 @@ const Vraag1 = ({}) => {
                     </View>
 
                             <View style={styles.progress}>
+                                <View style={styles.circleVol} />
                                 <View style={styles.circleHighlight} />
-                                <View style={styles.circle} />
                                 <View style={styles.circle} />
                                 <View style={styles.circle} />
                                 <View style={styles.circle} />
@@ -58,7 +57,7 @@ const Vraag1 = ({}) => {
                             <View style={styles.containerButtons}>
                                 <Pressable
                                 style={styles.back} >
-                                    <Text style={styles.textButton}>Annuleren</Text>
+                                    <Text style={styles.textButton}>Terug</Text>
                                 </Pressable>
 
                                 <Pressable
@@ -77,7 +76,8 @@ const Vraag1 = ({}) => {
 
         </View>
     );
+
 };
 
-export default Vraag1;
+export default Vraag2;
 

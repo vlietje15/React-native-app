@@ -23,13 +23,6 @@ const Survey = ({}) => {
                     <Text style={styles.textButtonPri}>Start</Text>
                 </Pressable>
 
-                <Button
-                style={styles.buttonPri}
-                  onPress={() =>
-                    navigate(Vraag1)
-                  }
-                  title="Go to Brent's profile"
-                />
           </View>
         </View>
 
