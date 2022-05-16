@@ -2,10 +2,10 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {StyleSheet, View, Text, Image} from 'react-native';
 
-import HomeScreen from '../screens/homeScreen';
-import ArtikelScreen from '../screens/artikelScreen';
-import ChatScreen from '../screens/chatScreen';
-import AccountScreen from '../screens/accountScreen';
+import HomeScreen from '../screens/home/homeScreen';
+import ArtikelScreen from '../screens/artikel/artikelScreen';
+import ChatScreen from '../screens/chat/chatScreen';
+import AccountScreen from '../screens/account/accountScreen';
 
 import { styles } from "./stylesTabs";
 
@@ -14,9 +14,17 @@ const Tab = createBottomTabNavigator();
 const Tabs = () => {
     return(
         <Tab.Navigator 
-            style={styles.navbar} 
-            tabBarOptions = {{ showLabel:  false, }}
+            // style={styles.navbar} 
+            tabBarOptions = {{ showLabel: false, }}
+            screenOptions = {{ 
+                headerShown: false, 
+                tabBarStyle:{ 
+                    backgroundColor: '#3975BB',
+                    height: 85,
+            } }}
+            
         >
+
             <Tab.Screen 
                 name="Home"
                 component={HomeScreen}
@@ -24,7 +32,7 @@ const Tabs = () => {
                     tabBarIcon: () => (
                         <View>
                             <Image
-                                source={require('../assets/icons/home-nav-g.png')}
+                                source={require('../assets/icons/PNG-Navbar-icons/home-nav.png')}
                                 resizeMode='contain'
                                 style={styles.icons}
                             />
@@ -40,7 +48,7 @@ const Tabs = () => {
                     tabBarIcon: () => (
                         <View>
                             <Image
-                                source={require('../assets/icons/artikel-nav-g.png')}
+                                source={require('../assets/icons/PNG-Navbar-icons/artikel-nav.png')}
                                 resizeMode='contain'
                                 style={styles.icons}
                             />
@@ -57,7 +65,7 @@ const Tabs = () => {
                     tabBarIcon: () => (
                         <View>
                             <Image
-                                source={require('../assets/icons/chat-nav-g.png')}
+                                source={require('../assets/icons/PNG-Navbar-icons/chat-nav.png')}
                                 resizeMode='contain'
                                 style={styles.icons}
                             />
@@ -73,7 +81,7 @@ const Tabs = () => {
                     tabBarIcon: () => (
                         <View>
                             <Image
-                                source={require('../assets/icons/account-nav-g.png')}
+                                source={require('../assets/icons/PNG-Navbar-icons/account-nav.png')}
                                 resizeMode='contain'
                                 style={styles.icons}
                             />

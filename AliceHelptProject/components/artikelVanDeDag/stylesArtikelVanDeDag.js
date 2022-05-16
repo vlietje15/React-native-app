@@ -20,15 +20,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
 
-  tekstArtikel:{
-      
-  },    
-  
   titleArtikel: {
     fontSize: 16,
     marginTop: 4,
     fontWeight: 'bold',
-
+    color: '#000'
   },
 
   subTitleArtikel:{
@@ -38,10 +34,7 @@ const styles = StyleSheet.create({
   paragraafArtikel: {
     fontSize: 12,
     marginTop: 8,
-
-  },
-
-  buttonArtikel: {
+    color: '#000'
 
   },
 

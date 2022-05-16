@@ -1,10 +1,10 @@
 import React from "react";
 import {View, Text, Button, StyleSheet, Image, ScrollView} from 'react-native';
-import { styles } from "";
+import { styles } from "./stylesOverALice";
 
 const OverAlice = ({}) => {
     return (
-        <View>
+        <View style={styles.wrapperOver}>
             <Text style={styles.title}>
                 Wie is Alice helpt?
             </Text>

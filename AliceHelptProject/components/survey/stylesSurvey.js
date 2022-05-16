@@ -11,29 +11,38 @@ const styles = StyleSheet.create({
     marginBottom: 40,
     borderColor: '#3975BB',
     borderWidth: 1.5,
-    width: 146,
+    width: '45%',
     height: 180,
     margin: 4,
+  },
+
+  gap :{
+    width: '5%',
+  },
+
+  content: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   iconSurvey: {
     width: 44,
     height: 50,
-    marginLeft: 51,
     marginTop: 22,
   },
   
   titleSurvey: {
     fontSize: 14,
     marginTop: 8,
-    marginLeft: 21.5,
     fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#000'
   },
 
   datumSurvey: {
       fontSize: 10,
       marginTop: 8,
-      marginLeft: 55.5, 
+      color: '#000'
   },
 
   buttonPri: {
@@ -43,7 +52,6 @@ const styles = StyleSheet.create({
     height: 28,
     width: 70,
     marginTop: 8,
-    marginLeft: 37.6,
   },
 
   buttonSec: {
@@ -54,7 +62,6 @@ const styles = StyleSheet.create({
     height: 28,
     width: 70,
     marginTop: 12,
-    marginLeft: 37.6,
   },
 
   textButtonPri: {
