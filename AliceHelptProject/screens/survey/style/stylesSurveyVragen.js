@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     textButtonBackHome:{
         color: '#fff',
         fontSize: 18,
+        Color: '#3975BB'
     },
 
     containerSurvey:{

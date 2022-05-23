@@ -3,14 +3,19 @@ import {View, Text, Button, StyleSheet, Image, ScrollView, ImageBackground} from
 import { styles } from "../style/stylesSurveyVragen";
 import MultipleChoice from "react-native-multiple-choice-picker";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
+import { useNavigation } from "@react-navigation/native";
 
 const Vraag4 = ({}) => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../../../assets/image/bgSurveyKort.png')}> 
 
             <Pressable
-                    style={styles.backHome} >
+                    style={styles.backHome} 
+                    onPress={() => {navigation.navigate('Home');}}
+                    >
                         <Text style={styles.textButtonBackHome}>
                             Back
                         </Text>
@@ -56,12 +61,14 @@ const Vraag4 = ({}) => {
                             
                             <View style={styles.containerButtons}>
                                 <Pressable
-                                style={styles.back} >
+                                style={styles.back} 
+                                onPress={() => {navigation.navigate('Vraag3');}}>
                                     <Text style={styles.textButton}>Terug</Text>
                                 </Pressable>
 
                                 <Pressable
-                                style={styles.volgende} >
+                                style={styles.volgende} 
+                                onPress={() => {navigation.navigate('Vraag5');}}>
                                     <Text style={styles.textButton}>Volgende</Text>
                                 </Pressable>
                             </View>

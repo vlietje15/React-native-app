@@ -50,7 +50,7 @@ const Tabs = () => {
             
             <Tab.Screen 
                 name="Artikel"
-                component={Vraag1} 
+                component={ArtikelScreen} 
                 options={{
                     tabBarIcon: () => (
                         <View>
@@ -67,7 +67,7 @@ const Tabs = () => {
             
             <Tab.Screen 
                 name="Chat"
-                component={Vraag2} 
+                component={ChatScreen} 
                 options={{
                     tabBarIcon: () => (
                         <View>
@@ -83,7 +83,7 @@ const Tabs = () => {
             
             <Tab.Screen 
                 name="Account"
-                component={Vraag3}
+                component={AccountScreen}
                 options={{
                     tabBarIcon: () => (
                         <View>
@@ -96,6 +96,7 @@ const Tabs = () => {
                     ),
                 }}
             />
+
         </Tab.Navigator>
     );
 }

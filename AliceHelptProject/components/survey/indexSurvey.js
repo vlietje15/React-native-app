@@ -2,12 +2,15 @@ import React from "react";
 import { StyleSheet, View, Text, Pressable, Image, Button, onPress } from "react-native";
 import { RollInRight } from "react-native-reanimated";
 import { styles } from "./stylesSurvey";
-
 import Vraag1 from "../../screens/survey/vraag_1/indexVraag1";
-import { TouchableOpacity } from "react-native-gesture-handler";
-
+import { TouchableOpacity } from "react-native-gesture-handler"
+import HomeScreen from "../../screens/home/homeScreen";
+import { useNavigation } from "@react-navigation/native";
+// import * as RootNavigation from './../../navigation/RootNavigation';
 
 const Survey = ({}) => {
+  const navigation = useNavigation();
+
   return (
       <View style={styles.surveyWrapper}>
         <View style={styles.square} >
@@ -19,7 +22,8 @@ const Survey = ({}) => {
 
                 <Pressable
                   style={styles.buttonPri} 
-                  onPress={() => navigate(Vraag1)}>
+                    onPress={() => navigation.navigate('Questions', { screen: 'Vraag1'})}
+                >
                     <Text style={styles.textButtonPri}>Start</Text>
                 </Pressable>
 
@@ -45,4 +49,4 @@ const Survey = ({}) => {
 
 
 
-export default Survey;''
+export default Survey;
