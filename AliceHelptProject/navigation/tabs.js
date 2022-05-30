@@ -14,6 +14,9 @@ import Vraag3 from '../screens/survey/vraag_3/indexVraag3';
 import Vraag4 from '../screens/survey/vraag_4/indexVraag4';
 import Vraag5 from '../screens/survey/vraag_5/indexVraag5';
 import Vraag6 from '../screens/survey/vraag_6/indexVraag6';
+import SummarySurvey from '../screens/survey/indexSummarySurvey';
+import TestRedux from '../POC-Redux/indexPOCRedux';
+// import CheckBoxAntwoorden from '../testCheckBox';
 
 
 const Tab = createBottomTabNavigator();
@@ -95,6 +98,11 @@ const Tabs = () => {
                         </View>
                     ),
                 }}
+            />
+
+            <Tab.Screen 
+                name="TestRedux"
+                component={TestRedux}
             />
 
         </Tab.Navigator>

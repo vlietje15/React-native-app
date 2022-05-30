@@ -5,6 +5,7 @@ import Vraag3 from '../screens/survey/vraag_3/indexVraag3';
 import Vraag4 from '../screens/survey/vraag_4/indexVraag4';
 import Vraag5 from '../screens/survey/vraag_5/indexVraag5';
 import Vraag6 from '../screens/survey/vraag_6/indexVraag6';
+import SummarySurvey from '../screens/survey/indexSummarySurvey';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
@@ -19,6 +20,7 @@ const Questions = () => {
           <Stack.Screen name='Vraag4' component={Vraag4}/>
           <Stack.Screen name='Vraag5' component={Vraag5}/>
           <Stack.Screen name='Vraag6' component={Vraag6}/>
+          <Stack.Screen name='SummarySurvey' component={SummarySurvey}/>
         </Stack.Navigator>
     );
   }

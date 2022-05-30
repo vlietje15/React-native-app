@@ -4,10 +4,14 @@ import { styles } from "../style/stylesSurveyVragen";
 import MultipleChoice from "react-native-multiple-choice-picker";
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import { useNavigation } from "@react-navigation/native";
+import RadioGroup,{Radio} from "react-native-radio-input";
 
 const Vraag4 = ({}) => {
     const navigation = useNavigation();
-
+    getChecked = (value) => {
+        // value = our checked value
+        console.log(value)
+      }
     return (
         <View style={styles.container}>
             <ImageBackground source={require('../../../assets/image/bgSurveyKort.png')}> 
@@ -33,18 +37,13 @@ const Vraag4 = ({}) => {
                             Ik kom graag naar school
                         </Text>
 
-                        <MultipleChoice
-                            direction={'column'}
-                            chosenColor={'#3975BB'}
-                            chosenTextColor={'#000'}
-                            chosenIndex={'none'}
-                            choices={[
-                                'Eens',
-                                'Gedeeltelijk mee eens',
-                                'Neutraal',
-                                'Gedeeltelijk oneens',
-                                'Oneens'
-                            ]}/>
+                        <RadioGroup getChecked={this.getChecked}>
+                            <Radio iconName={"lens"} label={"Eens"} value={"Agree"}/>
+                            <Radio iconName={"lens"} label={"Gedeeltelijk mee eens"} value={"PartlyAgree"}/>
+                            <Radio iconName={"lens"} label={"Neutraal"} value={"Neutral"}/>
+                            <Radio label={"Gedeeltelijk mee oneens"} value={"PartlyDisagree"}/>
+                            <Radio label={"Oneens"} value={"Disagree"}/>
+                        </RadioGroup>
 
                     </View>
 
