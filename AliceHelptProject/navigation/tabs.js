@@ -15,7 +15,7 @@ import Vraag4 from '../screens/survey/vraag_4/indexVraag4';
 import Vraag5 from '../screens/survey/vraag_5/indexVraag5';
 import Vraag6 from '../screens/survey/vraag_6/indexVraag6';
 import SummarySurvey from '../screens/survey/indexSummarySurvey';
-import TestRedux from '../POC-Redux/indexPOCRedux';
+import TestReduxV2 from '../POC-Redux-2.0/indexPOCRedux2.0';
 // import CheckBoxAntwoorden from '../testCheckBox';
 
 
@@ -102,7 +102,7 @@ const Tabs = () => {
 
             <Tab.Screen 
                 name="TestRedux"
-                component={TestRedux}
+                component={TestReduxV2}
             />
 
         </Tab.Navigator>
