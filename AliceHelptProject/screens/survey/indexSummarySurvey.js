@@ -3,8 +3,11 @@ import {View, Text, Button, StyleSheet, Image, ScrollView, ImageBackground} from
 import Pressable from "react-native/Libraries/Components/Pressable/Pressable";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./stylesSummary";
+import reducerAnswer1 from "./vraag_1/ReduxAnswer1/reducerAnswer1";
+import { connect } from 'react-redux'
+import { createStore } from 'redux'
 
-
+const store = createStore(reducerAnswer1)
 
 const SummarySurvey = ({}) => {
     const navigation = useNavigation();
@@ -33,7 +36,7 @@ const SummarySurvey = ({}) => {
                             </Text> 
 
                             <Text style={styles.yourAnswer}>
-                                Jouw antwoord:
+                                Jouw antwoord: {this.props.Answer1}
                             </Text>
 
                             <Text style={styles.change}>
@@ -106,9 +109,9 @@ const SummarySurvey = ({}) => {
                                 Ik voel me veilig in mijn klas
                             </Text>  
 
-                            <Text style={styles.yourAnswer}>
-                                Jouw antwoord:
-                            </Text> 
+                                <Text style={styles.yourAnswer}>
+                                    Jouw antwoord:
+                                </Text>
 
                             <Text style={styles.change}>
                                 >
@@ -152,5 +155,16 @@ const SummarySurvey = ({}) => {
     );
 };
 
-export default SummarySurvey;
+function mapStateToProps(state) {
+    return {
+        Answer1: state.Answer1
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SummarySurvey)
 

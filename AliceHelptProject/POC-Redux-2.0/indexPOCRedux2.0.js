@@ -39,9 +39,9 @@ class TestReduxV2 extends Component {
 export default TestReduxV2
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
+    // container: {
+    //     flex: 1,
+    //     alignItems: 'center',
+    //     justifyContent: 'center'
+    // }
 });

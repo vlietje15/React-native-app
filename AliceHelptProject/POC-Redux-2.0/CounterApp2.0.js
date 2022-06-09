@@ -28,6 +28,16 @@ class CounterAppV2 extends Component {
     render() {
         return (
             <View style={styles.container}>
+                
+                <RadioGroup getChecked={this.getChecked}>
+                    <Radio label={"Eens"} value={"Agree"}/>
+                    <Radio label={"Gedeeltelijk mee eens"} value={"PartlyAgree"}/>
+                    <Radio label={"Neutraal"} value={"Neutral"}/>
+                    <Radio label={"Gedeeltelijk mee oneens"} value={"PartlyDisagree"}/>
+                    <Radio label={"Oneens"} value={"Disagree"}/>
+                </RadioGroup>
+
+                
                     {/* <TouchableOpacity onPress={() => this.props.agree()}>
                         <Text style={{ fontSize: 20 }}>Agree</Text>
                     </TouchableOpacity>
@@ -46,46 +56,7 @@ class CounterAppV2 extends Component {
 
                     <TouchableOpacity onPress={() => this.props.disagree()}>
                         <Text style={{ fontSize: 20 }}>Disagree</Text>
-                    </TouchableOpacity> */}
-
-                                <RadioGroup getChecked={this.getChecked}>
-                                        <Radio label={"Eens"} value={"Agree"}/>
-                                        <Radio label={"Gedeeltelijk mee eens"} value={"PartlyAgree"}/>
-                                        <Radio label={"Neutraal"} value={"Neutral"}/>
-                                         <Radio label={"Gedeeltelijk mee oneens"} value={"PartlyDisagree"}/>
-                                        <Radio label={"Oneens"} value={"Disagree"}/>
-                                </RadioGroup>
-
-                                {/* <RadioGroup getChecked={this.getChecked}>
-                                    <RadioGroup getChecked={() => this.props.agree()}>
-                                        <Radio label={"Eens"} value={"Agree"}/>
-                                    </RadioGroup>
-
-                                    <RadioGroup getChecked={() => this.props.agree()}>
-                                        <Radio label={"Gedeeltelijk mee eens"} value={"PartlyAgree"}/>
-                                    </RadioGroup>
-                                    
-                                    <RadioGroup getChecked={() => this.props.agree()}>
-                                        <Radio label={"Neutraal"} value={"Neutral"}/>
-                                    </RadioGroup>
-                                    
-                                    <RadioGroup getChecked={() => this.props.agree()}>
-                                         <Radio label={"Gedeeltelijk mee oneens"} value={"PartlyDisagree"}/>
-                                    </RadioGroup>
-                                   
-                                    <RadioGroup getChecked={() => this.props.agree()}>
-                                        <Radio label={"Oneens"} value={"Disagree"}/>
-                                    </RadioGroup>
-                                </RadioGroup> */}
-
-                                {/* <RadioGroup getChecked={this.getChecked}>
-                                <TouchableOpacity onPress={() => this.props.agree()}><Radio label={"Eens"} value={"Agree"}/> </TouchableOpacity>
-                                    <Radio label={"Gedeeltelijk mee eens"} value={"PartlyAgree"}/>
-                                    <Radio label={"Neutraal"} value={"Neutral"}/>
-                                    <Radio label={"Gedeeltelijk mee oneens"} value={"PartlyDisagree"}/>
-                                    <Radio label={"Oneens"} value={"Disagree"}/>
-                                </RadioGroup>   */}
-                    
+                    </TouchableOpacity> */}                 
                     
                     <Text style={{ fontSize: 20, marginTop: 50, }}>Jouw antwoord: {this.props.Antwoord1}</Text>
             </View>
@@ -113,10 +84,10 @@ export default connect(mapStateToProps, mapDispatchToProps)(CounterAppV2)
 
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'center',
-        marginLeft: 70,
-    }
+    // container: {
+    //     flex: 1,
+    //     flexDirection: 'column',
+    //     justifyContent: 'center',
+    //     marginLeft: 70,
+    // }
 });
